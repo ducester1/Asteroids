@@ -17,7 +17,7 @@ namespace Asteroids
             this.startVelocity = startVelocity;
             position = startPosition;
             AngularDirection = startVelocity;
-            velocity = AngularDirection * 500; 
+            velocity = AngularDirection * 300; 
         }
     }
 }
