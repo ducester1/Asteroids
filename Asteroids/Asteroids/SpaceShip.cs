@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Asteroids
             :base("spr_spaceship")
         {
             origin = Center;
+            position = new Vector2(Asteroids.Screen.X, Asteroids.Screen.Y) / 2;
         }
 
         public override void HandleInput(InputHelper inputHelper)

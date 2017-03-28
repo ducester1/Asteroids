@@ -8,16 +8,21 @@ namespace Asteroids
 {
     class Score : TextGameObject
     {
-        public int score = 0;
+        private int amount;
         public Score()
             :base("GameFont")
         {
-
+            text = amount.ToString();
         }
-        public override void Update(GameTime gameTime)
+        public int Amount
         {
-            base.Update(gameTime);
-            text = "score:" + score;
+            get { return amount; }
+            set
+            {
+                amount = value;
+                text = amount.ToString();
+            }
         }
+
     }
 }

@@ -8,13 +8,11 @@ namespace Asteroids
 {
     class Bullet : RotatingSpriteGameObject
     {
-        Vector2 startPosition;
-        Vector2 startVelocity;
+
         public Bullet(Vector2 startPosition, Vector2 startVelocity)
             :base("spr_Bullet")
         {
-            this.startPosition = startPosition;
-            this.startVelocity = startVelocity;
+            origin = Center;
             position = startPosition;
             AngularDirection = startVelocity;
             velocity = AngularDirection * 300; 

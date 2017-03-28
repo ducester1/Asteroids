@@ -47,7 +47,7 @@ namespace Asteroids
                     {
                         r.rockType--;
                         b.Visible = false;
-                        score.score += 10;
+                        score.Amount += 10;
                     }
                 }
                 if (r.CollidesWith(spaceShip)) Asteroids.GameStateManager.SwitchTo("GameOverState");
