@@ -33,7 +33,9 @@ namespace Asteroids
             SetFullScreen(false);
             IsMouseVisible = true;
 
-            // TODO: use this.Content to load your game content here      
+            // TODO: use this.Content to load your game content here 
+            gameStateManager.AddGameState("PlayingState", new PlayingState());
+            gameStateManager.SwitchTo("PlayingState");     
 
         }
 
