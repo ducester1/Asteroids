@@ -11,6 +11,7 @@ namespace Asteroids
     {
         SpaceShip spaceShip;
         GameObjectList bullets, rocks;
+        Score score;
 
         public PlayingState()
         {
@@ -18,11 +19,13 @@ namespace Asteroids
             spaceShip = new SpaceShip();
             bullets = new GameObjectList();
             rocks = new GameObjectList();
+            score = new Score();
 
             this.Add(background);
             this.Add(spaceShip);
             this.Add(bullets);
             this.Add(rocks);
+            this.Add(score);
 
             for (int i = 0; i < 20; i++)
             {
@@ -44,8 +47,10 @@ namespace Asteroids
                     {
                         r.rockType--;
                         b.Visible = false;
+                        score.score += 10;
                     }
                 }
+                if (r.CollidesWith(spaceShip)) Asteroids.GameStateManager.SwitchTo("GameOverState");
             }
         }
 
